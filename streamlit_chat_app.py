@@ -21,14 +21,14 @@ with st.sidebar:
     
     # Create a button to reset the conversation.
     # 'help' provides a tooltip that appears when hovering over the button.
-    reset_button = st.button("Reset Conversation", help="Clear all messages and start fresh")
+    reset_button = st.button("Reset Obrolan", help="Clear all messages and start fresh")
 
 # --- 3. API Key and Client Initialization ---
 
 # Check if the user has provided an API key.
 # If not, display an informational message and stop the app from running further.
 if not google_api_key:
-    st.info("Silakan masukkan API Key Google AI anda untuk memulai obrolan.", icon="🗝️")
+    st.info("Silahkan masukkan Google AI API Key anda untuk memulai obrolan.", icon="🗝️")
     st.stop()
 
 # This block of code handles the creation of the Gemini API client.
@@ -129,5 +129,6 @@ if prompt:
     # 5. Add the assistant's response to the message history list.
 
     st.session_state.messages.append({"role": "assistant", "content": answer})
+
 
 
