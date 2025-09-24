@@ -5,7 +5,7 @@ from google import genai  # For interacting with the Google Gemini API
 # --- 1. Page Configuration and Title ---
 
 # Set the title and a caption for the web page
-st.title("💬 Gemini Chatbot")
+st.title("💬 Gemini Chatbot Testing")
 st.caption("A simple and friendly chat using Google's Gemini Flash model")
 
 # --- 2. Sidebar for Settings ---
@@ -127,4 +127,5 @@ if prompt:
     with st.chat_message("assistant"):
         st.markdown(answer)
     # 5. Add the assistant's response to the message history list.
+
     st.session_state.messages.append({"role": "assistant", "content": answer})
