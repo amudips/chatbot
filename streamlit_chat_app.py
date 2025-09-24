@@ -6,7 +6,7 @@ from google import genai  # For interacting with the Google Gemini API
 
 # Set the title and a caption for the web page
 st.title("💬 Gemini Chatbot Testing")
-st.caption("A simple and friendly chat using Google's Gemini Flash model")
+st.caption("Chatbot menggunakan basis model Gemini")
 
 # --- 2. Sidebar for Settings ---
 
@@ -28,7 +28,7 @@ with st.sidebar:
 # Check if the user has provided an API key.
 # If not, display an informational message and stop the app from running further.
 if not google_api_key:
-    st.info("Please add your Google AI API key in the sidebar to start chatting.", icon="🗝️")
+    st.info("Silakan masukkan API Key Google AI anda untuk memulai obrolan.", icon="🗝️")
     st.stop()
 
 # This block of code handles the creation of the Gemini API client.
@@ -129,3 +129,4 @@ if prompt:
     # 5. Add the assistant's response to the message history list.
 
     st.session_state.messages.append({"role": "assistant", "content": answer})
+
